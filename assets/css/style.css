@@ -97,8 +97,14 @@ button {
     display: inline-block;
 }
 
-.item {
+.searchpage-item {
     margin-bottom: 20px;
+}
+
+.item-info {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #cdcdcd;
 }
 
 .item__time-left, .item__time-current, .item__watch-stats,
