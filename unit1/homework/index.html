@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auction Homepage</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="javascript:void(0);">ABC Auction</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-left navbar-input-group" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter product name">
+                </div>
+                <button type="submit" class="btn btn-default search-button">Search</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-question-sign"></span> Help</a>
+                </li>
+                <li><a href="javascript:void(0);"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping
+                    cart</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- / Navbar -->
+
+<div class="container" id="container">
+
+    <section class="mainpage">
+
+        <div class="row">
+            <!-- Featured Products -->
+
+            <div id="featured-product-carousel" class="carousel slide" data-pause="hover" data-wrap="true"
+                 data-interval="3000">
+                <ol class="carousel-indicators">
+                    <li data-target="#featured-product-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#featured-product-carousel" data-slide-to="1" class=""></li>
+                    <li data-target="#featured-product-carousel" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="assets/img/promo-product-1.jpg" alt="ABC Auction Deals" class="img-responsive center-block">
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/promo-product-2.jpg" alt="ABC Auction Deals" class="img-responsive center-block">
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/promo-product-3.jpg" alt="ABC Auction Deals" class="img-responsive center-block">
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#featured-product-carousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#featured-product-carousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+
+            <!-- / Featured Products -->
+        </div>
+        <br/><br/>
+        <div class="row">
+            <!-- Featured Products list with thumbnails and description  -->
+            <ul class="list-unstyled mainpage__list">
+                <li class="col-sm-4 mainpage__item">
+                    <div class="col-md-4">
+                        <a href="javascript:void(0)"><img src="" alt="" class="img-responsive mainpage__item-img"></a>
+                    </div>
+
+                    <div class="product-description-holder col-md-8">
+                        <h2><a href="javascript:void(0)" class="mainpage__item-title"></a></h2>
+
+                        <p class="mainpage__item-description">
+                            <b>Item's description:</b>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <!-- / Featured Products list with thumbnails and description  -->
+        </div>
+    </section>
+
+    <section class="searchpage">
+
+        <ol class="breadcrumb">
+            <li><a class="home-link" href="#">Home</a></li>
+            <li>Search Results</li>
+        </ol>
+
+        <form action="">
+            <div class="row">
+                <div class="form-group product-options col-md-4">
+                    <label for="product-options" class="product-options__title">Product</label>
+                    <input type="text" id="product-options" class="product-options__input form-control col-sm-5" placeholder="Product Title"/>
+                    <select name="product-category" id="product-category" class="product-options__category form-control col-sm-7">
+                        <option value="1">clothes</option>
+                        <option value="2">electronics</option>
+                    </select>
+                </div>
+                <div class="product-price col-md-4 col-sm-6">
+                    <label for="product-price__from" class="product-price__title col-xs-12">Product Price</label>
+                    <input type="text" id="product-price__from" class="product-price__from form-control">
+                    <input type="text" class="product-price__to form-control">
+                    <input type="range" class="product-price__slider"></input>
+                </div>
+                <div class="product-other col-md-4 col-sm-6 col-xs-12">
+                    <label for="product-date__input" class="product-other__title">Max Auction Close Date</label>
+                    <input id="product-date__input" class="product-date__input form-control" />
+                    <div class="fa fa-calendar"></div>
+                    <label class="product-bids__text col-xs-9" for="product-bids__input">Number of Bids</label>
+                    <input type="number" id="product-bids__input" placeholder="10" class="product-bids__input form-control col-xs-2" />
+                </div>
+                <div class="row">
+                    <button class="product__find submit btn btn-default col-md-4 col-sm-6 col-xs-10 col-md-offset-4 col-sm-offset-3 col-xs-offset-1">Find Now</button>
+                </div>
+            </div>
+        </form>
+
+        <hr>
+
+        <ul class="searchpage__list">
+            <li class="searchpage-item">
+                <article class="item-info col-md-6">
+                    <div class="row">
+                        <div class="item-image col-md-6 col-sm-5">
+                            <img src="" alt="" class="img-responsive searchpage-item__img">
+                        </div>
+                        <div class="item-description col-md-6 col-sm-7">
+                            <header class="item__header">
+                                <h2><a href="javascript:void(0)" class="searchpage-item__title">Item's title</a></h2>
+                            </header>
+                            <p class="searchpage-item__description">
+                                <b>Item's description:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod
+                                tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="item-details row">
+                        <li class="item__time col-sm-4 col-xs-12">
+                            <div class="item__time-left item-details_bold"></div>
+                            <div class="item__time-current">Today 15.30</div>
+                        </li>
+                        <li class="item__watch col-sm-4 col-xs-12">
+                            <div class="item__watch-amount">
+                                <div class="item__watch-stats">
+                                    <div class="fa fa-eye item-details_bold"></div>
+                                    <div class="item__watch-number item-details_bold">17</div>
+                                </div>
+                                <div class="item__watch-text">Watchers</div>
+                            </div>
+                        </li>
+                        <li class="item__price col-sm-4 col-xs-12">
+                            <div class="item__price-num item-details_bold">$1234</div>
+                            <div class="item__price-text">Current Price</div>
+                        </li>
+                    </ul>
+                </article>
+            </li>
+        </ul>
+
+    </section>
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center container">
+    <br/>
+    <a class="home-link" href="javascript:void(0)">Home</a> |
+    <a class="search-button" href="javascript:void(0)">Search</a> |
+    <a href="javascript:void(0)">About Us</a> |
+    <a href="javascript:void(0)">Terms of Service</a>
+    <br/><br/>
+</footer>
+<!-- / Footer -->
+
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/fillpage.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

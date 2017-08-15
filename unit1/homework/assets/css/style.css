@@ -1,0 +1,152 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.42;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea {
+    border: none;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+button {
+    border: none;
+}
+
+.searchpage {
+    display: none;
+}
+
+
+.searchpage input, .searchpage select {
+    margin-bottom: 15px;
+}
+
+.product-options__title {
+    padding: 0;
+    width: 100%;
+}
+
+.product-price__from, .product-price__to {
+    width: 40%;
+    display: inline-block;
+}
+
+.product-price__from {
+    float: left;
+}
+
+.product-price__to {
+    float: right;
+}
+
+.product-date__input {
+    width: 90%;
+    display: inline-block;
+}
+
+.item-details_bold {
+    font-weight: bold;
+}
+
+.fa-calendar {
+    font-size: 25px;
+}
+
+.product-bids__label {
+    display: inline-block;
+}
+
+.product-bids__input {
+    width: 20%;
+    display: inline-block;
+}
+
+.searchpage-item {
+    margin-bottom: 20px;
+}
+
+.item-info {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #cdcdcd;
+}
+
+.item__time-left, .item__time-current, .item__watch-stats,
+.item__watch-text, .item__price-num, .item__price-text {
+    width: 45%;
+    display: inline-block;
+}
+
+.fa-eye {
+    width: 10%;
+}
+
+.item__watch-number {
+    display: inline-block;
+    width: 79%;
+}
+
+@media (min-width: 768px) {
+
+    .product-options__input, .product-options__category {
+        width: 45%;
+    }
+
+    .product-options__category {
+        float: right;
+    }
+
+    .searchpage input, .searchpage select {
+        margin-bottom: 20px;
+    }
+
+    .item__time-left, .item__time-current, .item__watch-stats,
+    .item__watch-text, .item__price-num, .item__price-text {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .product-options__input, .product-options__category {
+        width: 100%;
+    }
+}
+
