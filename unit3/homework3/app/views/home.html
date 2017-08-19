@@ -1,4 +1,4 @@
-<div ng-controller="HomeController as ctrl">
+<div>
   <div id="featured-product-carousel" class="carousel slide" data-pause="hover" data-wrap="true" data-interval="3000">
       <ol class="carousel-indicators">
           <li data-target="#featured-product-carousel" data-slide-to="0" class="active"></li>
@@ -38,7 +38,7 @@
                   <a href="javascript:void(0)"><img ng-src="images/{{ product.thumb }}" alt="" class="img-responsive"></a>
               </div>
               <div class="product-description-holder col-xs-8">
-                  <h2><a href="javascript:void(0)">{{ product.title }}</a></h2>
+                  <h2><a href="#/product/{{product.id}}">{{ product.title }}</a></h2>
                   <p>{{ product.description }}</p>
               </div>
           </div>
