@@ -5,6 +5,7 @@
     return {
       scope: false,
       restrict: 'E',
+      controller: 'SearchFormController',
       templateUrl: 'views/partial/SearchFormDirective.html'
     };
   };

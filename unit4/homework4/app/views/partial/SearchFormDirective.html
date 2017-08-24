@@ -1,9 +1,10 @@
-<div>
+<form name="searchForm" novalidate>
   <div class="col-xs-12 col-md-4">
     <div class="row form-group">
       <div class="col-xs-12 col-sm-6 col-md-12">
         <label class="control-label">Product</label>
-        <input type="text" class="form-control" placeholder="Product title">
+        <input type="text" class="form-control" name="productTitle" placeholder="Product title" ng-minlength="3" required ng-model="productTitle">
+        <p class="help-block" ng-if="searchForm.productTitle.$invalid">Product title should be at least 3 characters long</p>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-12">
         <label class="control-label">&nbsp;</label>
@@ -29,8 +30,10 @@
             <label class="control-label">Max Auction Close Day</label>
 
             <div class="input-group">
-              <input auction-datepicker data-date-format="mm/dd/yyyy" class="form-control" value="03/11/2014">
+              <input type="date" auction-datepicker data-date-format="mm/dd/yyyy" class="form-control"  placeholder="{{minDate | date:'MM/dd/yyyy'}}" name="endDate" min="{{minDate}}">
               <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+              <p ng-if="searchForm.endDate.$error.date" class="help-block">End date should be a valid date</p>
+              <p ng-if="searchForm.endDate.$error.min" class="help-block">End date can't be in past</p>
             </div>
           </div>
           <div class="col-xs-12">
@@ -42,8 +45,10 @@
                   <label class="control-label">Number of Bids</label>
                 </div>
                 <div class="col-xs-4">
-                  <input type="number" class="form-control" value="3">
+                  <input type="number" name="bidsAmount" class="form-control" required ng-value="3" min="1" ng-model="bidsAmount">
+                  <p ng-if="searchForm.bidsAmount.$invalid || searchForm.bidsAmount.$error.min" class="help-block">Number of bids should be a positive value</p>
                 </div>
+
               </div>
             </form>
           </div>
@@ -53,6 +58,6 @@
   </div>
   <div class="col-xs-12 col-md-4 col-md-offset-4">
     <br>
-    <button class="btn btn-default btn-block btn-primary">Find more</button>
+    <button class="btn btn-default btn-block btn-primary" ng-disabled="searchForm.$invalid" ng-click="submitForm(searchForm)">Find more</button>
   </div>
-</div>
+</form>
