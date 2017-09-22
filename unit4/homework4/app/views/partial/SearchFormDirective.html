@@ -3,7 +3,7 @@
     <div class="row form-group">
       <div class="col-xs-12 col-sm-6 col-md-12">
         <label class="control-label">Product</label>
-        <input type="text" class="form-control" name="productTitle" placeholder="Product title" ng-minlength="3" required ng-model="productTitle">
+        <input type="text" class="form-control" ng-model="productTitle" name="productTitle" placeholder="Product title" ng-minlength="3" required value="{{formData.productTitle}}">
         <p class="help-block" ng-if="searchForm.productTitle.$invalid">Product title should be at least 3 characters long</p>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-12">
@@ -30,7 +30,7 @@
             <label class="control-label">Max Auction Close Day</label>
 
             <div class="input-group">
-              <input type="date" auction-datepicker data-date-format="mm/dd/yyyy" class="form-control"  placeholder="{{minDate | date:'MM/dd/yyyy'}}" name="endDate" min="{{minDate}}">
+              <input type="date" ng-model="endDate" auction-datepicker data-date-format="mm/dd/yyyy" class="form-control"  placeholder="{{minDate | date:'MM/dd/yyyy'}}" name="endDate" min="{{minDate}}">
               <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
               <p ng-if="searchForm.endDate.$error.date" class="help-block">End date should be a valid date</p>
               <p ng-if="searchForm.endDate.$error.min" class="help-block">End date can't be in past</p>

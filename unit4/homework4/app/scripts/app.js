@@ -39,7 +39,10 @@
     .config(['RestangularProvider', function (RestangularProvider) {
       RestangularProvider.setBaseUrl('/data');
       RestangularProvider.setRequestSuffix('.json');
-    }])
+    }])/*
+    .config(['$httpProvider', function ($httpProvider) {
+        $httpProvider.interceptors.push('searchInterceptor');
+    }])*/
     .run(['$rootScope', function ($rootScope) {
       $rootScope.$on('$routeChangeStart', function (event, next) {
         $rootScope.pageTitle = next.$$route.title;
